@@ -1,15 +1,14 @@
 /* eslint-disable no-unused-vars */
-/* eslint-disable react/react-in-jsx-scope */
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 
-function Home() {
+function Profile() {
   return (
     <div>
-      <h1>Home</h1>
-      <Link to="/about">Go to About page</Link>
+      <h1>Profile</h1>
+      <Link to="/">Go to Home page</Link>
     </div>
   );
 }
 
-export default Home;
+export default Profile;

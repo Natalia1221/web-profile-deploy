@@ -3,18 +3,32 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import Home from './routes/Home';
-import About from './routes/About';
+
+import VisiMisi from './routes/Profile';
+import Kegiatan from './routes/Kegiatan';
+import Berita from './routes/Berita';
+import Detail from './routes/Detail';
+import Pengurus from './routes/Pengurus';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Welcome to Ruangguru!</h1>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-      </Routes>
-    </div>
+    <>
+      <main>
+        <Routes>
+          <Route path="/" element={<VisiMisi />}/>
+          <Route path="/pengurus" element={<Pengurus />} />
+          <Route path="/Kegiatan" element={<Kegiatan />} />
+          <Route path="/Berita"  >
+            <Route index element={<Berita />} />
+            <Route path=":id" element={<Detail />} />
+          </Route>
+        </Routes>
+      </main>
+
+      <footer>
+        &copy; Copyright 2023
+      </footer>
+    </>
   );
 }
 

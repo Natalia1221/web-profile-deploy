@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@500;700&family=Oswald:wght@600;700&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap');
+
+/* For mobile: */
+@media screen and (max-width: 600px){
+    .box_kegiatan{
+        width:85%;
+        padding: 30px;
+        margin: 80px auto 100px auto;
+    }
+
+    .gambar_kegiatan{
+        width:60%;
+    }
+
+    .box_kegiatan h2 {
+        font-size:22px;
+    }
+
+    .box_kegiatan li{
+        font-size:15px;
+    }
+}
+
+/* For tablets: */
+@media screen and (min-width: 600px){
+    .box_kegiatan{
+        width:85%;
+        padding: 40px;
+        margin: 50px auto 100px auto;
+    }
+
+    .gambar_kegiatan{
+        width:50%;
+    }
+
+    .box_kegiatan h2 {
+        font-size:25px;
+    }
+
+    .box_kegiatan li{
+        font-size:15px;
+    }
+}
+/* For desktop: */
+@media only screen and (min-width: 768px){
+    .box_kegiatan{
+        width:80%;
+        padding: 10px 30px 30px 30px;
+        margin: 80px auto 100px auto;
+    }
+
+    .gambar_kegiatan{
+        width:40%;
+    }
+
+    .box_kegiatan h2 {
+        font-size:30px;
+    }
+
+    .box_kegiatan li{
+        font-size:18px;
+    }
+}
+
+@media only screen and (min-width: 992px){
+    .box_kegiatan{
+        width:70%;
+        padding: 30px 70px 30px 70px;
+        margin: 80px auto 100px auto;
+    }
+
+    .box_kegiatan h2 {
+        font-size:30px;
+    }
+
+    .box_kegiatan li{
+        font-size:20px;
+    }
+
+    .box_kegiatan ol{
+        width : 90%;
+        margin: 0 auto;
+    }
+}
+
+
+a {
+    text-decoration: none !important;
+}
+
+footer{
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    background-color: #F5F5F5;
+    padding: 20px 0;
+}
+
+/*PENGURUS*/
+.pengurus{
+    margin: 20px auto;
+    text-align: center;
+}
+
+.gambar_pengurus{
+    width:50%;
+}
+/*END OF PENGURUS*/
+
+/*KEGIATAN*/
+.kegiatan{
+    text-align: center;
+}
+
+.box_kegiatan{
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+#pendidikan, #admas{
+    background-color:#2A5171;
+}
+
+#target2 li, #white_title{
+    color:white;
+}
+
+.judul_kegiatan{
+    display:flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.box_kegiatan h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-right:20px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight:900;
+}
+
+.box_kegiatan li{
+    font-family: 'Roboto', sans-serif;
+    weight:400;
+}
+
+#target, #target2, #target3{
+    display:none;
+}
+
+button {
+    font-weight:900;
+    background-color: white;
+    border:1px solid white;   
+}
+
+#penelitian li .card-text{
+    font-size:15px;
+    height:20px;
+    text-align:left;
+}
+/*END OF KEGIATAN*/

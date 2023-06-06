@@ -1,0 +1,59 @@
+/* For mobile: */
+@media screen and (max-width: 600px){
+    .brand .navbar-brand {
+        font-size: 15px;
+    }
+  }
+  
+  /* For tablets: */
+  @media screen and (min-width: 600px){
+    .brand .navbar-brand {
+        font-size: 19px;
+    }
+  }
+  
+  @media only screen and (min-width: 992px){
+    .me-auto a {
+        margin : 0 50px;
+    }
+  
+    .dropdown-menu a{
+        margin : 0;
+    }
+
+    .dropdown-menu {
+        width : 30px;
+        height : 60px;
+      }
+  }
+  
+  .brand{
+      display:flex;
+  }
+  
+  .brand img{
+      width: 60px;
+      margin-right: 20px;
+  }
+  
+  .brand .navbar-brand {
+      font-family: 'Merriweather Sans', sans-serif;
+      font-weight: 700;
+  }
+  
+  .me-auto a {
+      font-family: 'Merriweather Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      color:black;
+  }
+
+  .me-auto a:hover {
+    color:grey;
+  }
+
+  .dropdown-menu a{
+    display: block;
+    margin:1px;
+    padding-left:4px;
+  }

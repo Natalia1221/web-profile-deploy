@@ -1,0 +1,158 @@
+/* For mobile: */
+@media screen and (max-width: 600px){
+    .carousel-inner img{
+        height: 300px;
+    }
+
+    .carousel-caption h3{
+        display:none;
+    }
+
+    .mb-5{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+    }
+
+    .ms-4{
+        margin: 20px auto;
+        width: 500px;
+    }
+
+    .detail{
+        width:80%;
+        margin:50px auto;
+        text-align:center;
+    }
+
+    #detail_image{
+        width:80%;
+    }
+
+    #detail_title{
+        font-size:20px;
+    }
+    
+    #detail_description{
+        width:80%;
+    }
+
+}
+
+/* For tablets: */
+@media screen and (min-width: 600px){
+    .carousel-inner img{
+        height: 400px;
+    }
+
+    .mb-5{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+    }
+
+    .ms-4{
+        margin: 10px;
+        width: 500px;
+    }
+
+    .detail{
+        width:80%;
+        margin:50px auto;
+        text-align:center;
+    }
+
+    #detail_image{
+        width:80%;
+    }
+
+    #detail_title{
+        font-size:25px;
+    }
+    
+    #detail_description{
+        width:80%;
+    }
+}
+
+/* For desktop: */
+@media only screen and (min-width: 768px){
+    .mb-5{
+        max-width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ms-4 {
+        width: 350px;
+    }
+
+    .card-body{
+        width: 200px;
+    }
+
+}
+
+@media only screen and (min-width: 1392px){
+    .carousel-inner img{
+        height: 600px;
+    }
+
+    .mb-5{
+        max-width: 90%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #detail_title{
+        font-size:35px;
+    }
+}
+
+.card-body{
+    width: 100%;
+}
+
+.card-title {
+    color:black;
+    text-align:center;
+    font-weight: bold;
+}
+
+.card-title:hover{
+    color:gray;
+}
+
+.carousel-inner img{
+    object-fit: cover;
+}
+
+.carousel-caption h3{
+    color: white;
+    text-shadow: 
+    1px 0px 0px black,   /* Right shadow */
+    -1px 0px 0px black,  /* Left shadow */
+    0px 1px 0px black,   /* Bottom shadow */
+    0px -1px 0px black;  /* Top shadow */
+}
+
+.card-text {
+    height:100px;
+    overflow: hidden;
+}
+
+/*DETAIL*/
+.detail{
+    margin:100px;
+    text-align:center;
+}
+
+#detail_title{
+    font-weight: bold;
+    margin: 40px ;
+}
+
+
+#detail_description{
+    margin: 40px auto;
+}

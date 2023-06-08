@@ -1,40 +1,72 @@
 /* For mobile: */
-@media screen and (max-width: 600px){
+@media screen and (max-width: 400px){
     .brand .navbar-brand {
-        font-size: 15px;
+        font-size: 12px;
     }
-  }
+
+    .brand img{
+        width: 40px;
+        margin-right: 10px;
+    }
+
+    .dropdown{
+        margin-bottom:10px;
+    }
+    .dropdownItem{
+        margin-bottom:20px;
+    }
+}
+
+
   
   /* For tablets: */
-  @media screen and (min-width: 600px){
+  @media screen and (min-width: 400px){
     .brand .navbar-brand {
-        font-size: 19px;
+        font-size: 12px;
+    }
+
+    .brand img{
+        width: 40px;
+        margin-right: 10px;
+    }
+
+    .dropdown{
+        margin-bottom:10px;
+    }
+    .dropdownItem{
+        margin-bottom:20px;
     }
   }
   
   @media only screen and (min-width: 992px){
+    .brand .navbar-brand {
+        font-size: 19px;
+    }
+
+    .brand img{
+        width: 60px;
+        margin-right: 20px;
+    }
+
     .me-auto a {
         margin : 0 50px;
     }
   
-    .dropdown-menu a{
-        margin : 0;
-    }
-
     .dropdown-menu {
         width : 30px;
         height : 60px;
       }
+    
+      .dropdownItem{
+        padding-top: 7px ;
+    }
   }
   
   .brand{
       display:flex;
   }
   
-  .brand img{
-      width: 60px;
-      margin-right: 20px;
-  }
+  
   
   .brand .navbar-brand {
       font-family: 'Merriweather Sans', sans-serif;

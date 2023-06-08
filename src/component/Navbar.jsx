@@ -18,13 +18,13 @@ function NavbarWeb() {
         
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <NavDropdown title="Profile" id="basic-nav-dropdown">
+          <Nav className="navbar-page me-auto">
+            <NavDropdown className='dropdown' title="Profile" id="basic-nav-dropdown">
                 <Link className='dropdownItem' to={"/"} >Visi Misi</Link>
                 <Link className='dropdownItem' to={"/pengurus"} >Pengurus</Link>
             </NavDropdown>
-            <Link to={"/kegiatan"} >Kegiatan</Link>
-            <Link to={"/Berita"} >Dokumentasi</Link>
+            <Link className='dropdownItem' to={"/kegiatan"} >Kegiatan</Link>
+            <Link className='dropdownItem' to={"/Berita"} >Dokumentasi</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

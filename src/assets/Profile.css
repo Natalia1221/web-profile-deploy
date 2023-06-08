@@ -1,7 +1,95 @@
-@media screen and (max-width: 600px){
+@media screen and (max-width: 400px){
     /*Section 1 */
+    .Jumbotron{
+        margin: 40px 20px;
+    }
+
     .gambar_beranda {
-        width: 70%;
+        width: 100%;
+        height:250px;
+        margin: 0 auto;
+    }
+
+    .description {
+        margin: 20px auto;
+        text-align: justify;
+    }
+
+    .description h2{
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .description #colored {
+        color: #2A5171;
+    }
+
+    .description p{
+        font-size: 10px;
+        padding : 20px;
+    }
+    /* END OF Section 1 */
+
+    /*Section 2 */
+    .angka {
+        font-size:14px;
+    }
+
+    .ket-angka{
+        font-size:10px;
+    }
+    /* END OF Section 2 */
+
+    /*Section 3 */
+    .gambar_visi{
+        display:none;
+    }
+    
+    #visi, #misi, #tujuan{
+        width:80%;
+        text-align:center;
+    }
+
+    #visi{
+        margin: 70px 0;
+        padding: 15px;
+        border-radius: 20px;
+    }
+
+    #misi, #tujuan {
+        margin: 40px 0;
+        padding: 15px;
+        border-radius: 20px;
+    }
+
+    #visi h3, #misi h3, .denah h3, #tujuan h3{
+        font-size:25px;
+    }
+
+    #visi p, #misi li, #tujuan li{
+        font-size:12px;
+    }
+
+    #misi li, #tujuan li{
+        text-align:left;
+    }
+
+    #misi ol{
+        width:80%;
+        margin: 0 auto;
+    }
+    /* END OF Section 3 */
+}
+
+@media screen and (min-width: 400px){
+    /*Section 1 */
+    .Jumbotron{
+        margin: 40px 50px;
+    }
+    
+    .gambar_beranda {
+        width: 100%;
+        height:250px;
         margin: 0 auto;
     }
 
@@ -42,11 +130,19 @@
     #visi, #misi, #tujuan{
         width:80%;
         text-align:center;
+        border-radius: 50px;
     }
 
-    #visi, #misi, #tujuan{
+    #visi{
         margin: 70px 0;
-        padding: 50px;
+        padding: 35px;
+        border-radius: 20px;
+    }
+
+    #misi, #tujuan {
+        margin: 40px 0;
+        padding: 15px;
+        border-radius: 20px;
     }
 
     #visi h3, #misi h3, .denah h3, #tujuan h3{
@@ -234,9 +330,7 @@
 }
 
 /* Section 1 */
-.Jumbotron{
-    margin: 40px 50px;
-}
+
 
 .gambar_beranda {
     display: block;
@@ -288,7 +382,6 @@
 
 #visi, #misi, #tujuan{
     margin: 100px auto;
-    border-radius: 50px;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 

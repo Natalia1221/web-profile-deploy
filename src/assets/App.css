@@ -28,13 +28,10 @@
         font-size:12px;
     }
 
-    .description-kegiatan{
-        overflow:scroll;
-    }
-
     .cardkegiatan p{
         height:fit-content;
     }
+
 }
 
 @media screen and (min-width: 400px){
@@ -53,18 +50,13 @@
     }
 
     .box_kegiatan li{
-        font-size:15px;
+        font-size:12px;
     }
 
-    #penelitian li .card-text{
-        font-size:15px;
-        height:20px;
-        text-align:left;
-    }
-
-    .cardkegiatan p{
+    .cardkegiatan p {
         height:fit-content;
     }
+
 }
 
 /* For tablets: */
@@ -104,7 +96,7 @@
     }
 
     .box_kegiatan li{
-        font-size:18px;
+        font-size:13px;
     }
 }
 
@@ -120,7 +112,7 @@
     }
 
     .box_kegiatan li{
-        font-size:20px;
+        font-size:15px;
     }
 
     .box_kegiatan ol{
@@ -187,6 +179,7 @@ footer{
 .box_kegiatan li{
     font-family: 'Roboto', sans-serif;
     weight:400;
+    text-align:left;
 }
 
 #target, #target2, #target3{

@@ -62,8 +62,8 @@ function CardPenelitian() {
                   <Card className="cardkegiatan">
                     <Card.Body>
                       <Card.Title>{card.name}</Card.Title>
-                      { typeof card.desc === "string"?<Card.Text>{card.desc}</Card.Text> :(<ul>{card.desc.map((list, i)=>{
-                        return <li key={i}><Card.Text className="description-kegiatan">{list}</Card.Text></li>
+                      { typeof card.desc === "string"?<Card.Text>{card.desc}</Card.Text> :(<ul className="listkegiatan">{card.desc.map((list, i)=>{
+                        return <li key={i}>{list}</li>
                       })}</ul>)
                       }
                     </Card.Body>

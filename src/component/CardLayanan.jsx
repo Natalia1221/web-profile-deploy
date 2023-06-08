@@ -31,7 +31,7 @@ function CardPendidikan() {
     <Row xs={1} md={2} className="g-4">
       {loading?( <p >Loading...</p>):(datas.record.BidangPendidikandanPengajaran.map((card)=>
         {return <Col key={card.id}>
-                  <Card>
+                  <Card className="cardkegiatan">
                     <Card.Body>
                       <Card.Title>{card.name}</Card.Title>
                       <Card.Text className="description-kegiatan">{card.desc}</Card.Text>
@@ -59,7 +59,7 @@ function CardPenelitian() {
         {
           
           return <Col key={card.id}>
-                  <Card>
+                  <Card className="cardkegiatan">
                     <Card.Body>
                       <Card.Title>{card.name}</Card.Title>
                       { typeof card.desc === "string"?<Card.Text>{card.desc}</Card.Text> :(<ul>{card.desc.map((list, i)=>{
@@ -89,7 +89,7 @@ function CardAbdimas() {
     <Row xs={1} md={2} className="g-4">
       {loading?( <p >Loading...</p>):(datas.record.BidangPengabdiankepadaMasyarakat.map((card)=>
         {return <Col key={card.id}>
-                  <Card>
+                  <Card className="cardkegiatan">
                     <Card.Body>
                       <Card.Title>{card.name}</Card.Title>
                       <Card.Text className="description-kegiatan">{card.desc}</Card.Text>

@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-
+import gambarPengurus from "../assets/image/pengurus.jpg"
 const Pengurus = () => {
   const [datas, setDatas] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -19,7 +19,7 @@ const Pengurus = () => {
   return (
     <>
       <div className="pengurus">
-      <img className="gambar_pengurus" src={loading?"":`${datas.record.pengurus}`}/>
+      <img className="gambar_pengurus" src ={gambarPengurus}/>
       </div>
     </>
   );

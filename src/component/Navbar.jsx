@@ -24,7 +24,7 @@ function NavbarWeb() {
                 <Link className='dropdownItem' to={"/pengurus"} >Pengurus</Link>
             </NavDropdown>
             <Link to={"/kegiatan"} >Kegiatan</Link>
-            <Link to={"/Berita"} >Berita</Link>
+            <Link to={"/Berita"} >Dokumentasi</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

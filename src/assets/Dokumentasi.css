@@ -1,5 +1,54 @@
 /* For mobile: */
-@media screen and (max-width: 600px){
+@media screen and (max-width: 400px){
+    .carousel-inner img{
+        height: 200px;
+    }
+
+    .carousel-caption h3{
+        display:none;
+    }
+
+    .mb-5{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+    }
+
+    .ms-4{
+        margin: 20px auto;
+        width: 500px;
+    }
+
+    .detail{
+        width:80%;
+        margin:50px auto;
+        text-align:center;
+    }
+
+    #detail_image{
+        width:80%;
+    }
+
+    #detail_title{
+        font-size:20px;
+    }
+    
+    #detail_description{
+        width:80%;
+    }
+
+    .cardKegiatan {
+        width:250px;
+        margin:0 auto 20px auto;
+    }
+
+    .cardKegiatan img {
+        height:150px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 400px){
     .carousel-inner img{
         height: 300px;
     }
@@ -35,6 +84,16 @@
     
     #detail_description{
         width:80%;
+    }
+
+    .cardKegiatan {
+        width:250px;
+        margin:0 auto 20px auto;
+    }
+
+    .cardKegiatan img {
+        height:150px;
+        object-fit: cover;
     }
 
 }
@@ -73,6 +132,16 @@
     #detail_description{
         width:80%;
     }
+
+    .cardKegiatan {
+        width:500px;
+        margin:0 auto 20px auto;
+    }
+
+    .cardKegiatan img {
+        height:300px;
+        object-fit: cover;
+    }
 }
 
 /* For desktop: */
@@ -92,6 +161,17 @@
         width: 200px;
     }
 
+    .cardKegiatan {
+        width:600px;
+        margin:20px auto;
+    }
+
+}
+
+@media only screen and (min-width: 1104px){
+    .cardKegiatan {
+        width:450px;
+    }
 }
 
 @media only screen and (min-width: 1392px){
@@ -106,6 +186,10 @@
 
     #detail_title{
         font-size:35px;
+    }
+
+    .cardKegiatan {
+        width:600px;
     }
 }
 
@@ -141,18 +225,15 @@
     overflow: hidden;
 }
 
-/*DETAIL*/
-.detail{
-    margin:100px;
+/*KEGIATAN*/
+.kegiatan{
+    margin: 80px auto;
+    width:90%;
+}
+
+.cardCaption{
+    height:60px;
     text-align:center;
+    font-weight:bold;
 }
-
-#detail_title{
-    font-weight: bold;
-    margin: 40px ;
-}
-
-
-#detail_description{
-    margin: 40px auto;
-}
+/*END OF KEGIATAN*/

@@ -8,7 +8,7 @@ import './assets/App.css';
 import NavbarWeb from './component/Navbar'
 import VisiMisi from './routes/Profile';
 import Kegiatan from './routes/Kegiatan';
-import Berita from './routes/Berita';
+import Dokumentasi from './routes/Dokumentasi';
 import Detail from './routes/Detail';
 import Pengurus from './routes/Pengurus';
 
@@ -22,7 +22,7 @@ function App() {
           <Route path="/pengurus" element={<Pengurus />} />
           <Route path="/Kegiatan" element={<Kegiatan />} />
           <Route path="/Berita">
-            <Route index element={<Berita />} />
+            <Route index element={<Dokumentasi />} />
             <Route path=":id" element={<Detail />} />
           </Route>
         </Routes>

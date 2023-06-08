@@ -1,7 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@500;700&family=Oswald:wght@600;700&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap');
 
 /* For mobile: */
-@media screen and (max-width: 600px){
+@media screen and (max-width: 400px){
+    .box_kegiatan{
+        width:95%;
+        padding: 20px;
+        margin: 80px auto 100px auto;
+    }
+
+    .gambar_kegiatan{
+        width:60%;
+    }
+
+    .box_kegiatan h2 {
+        font-size:18px;
+    }
+
+    .box_kegiatan li{
+        font-size:9px;
+    }
+
+    #penelitian li .card-text{
+        font-size:10px;
+    }
+
+    #target, #target2, #target3{
+        font-size:12px;
+        overflow:scroll;
+    }
+}
+
+@media screen and (min-width: 400px){
     .box_kegiatan{
         width:85%;
         padding: 30px;
@@ -18,6 +47,12 @@
 
     .box_kegiatan li{
         font-size:15px;
+    }
+
+    #penelitian li .card-text{
+        font-size:15px;
+        height:20px;
+        text-align:left;
     }
 }
 
@@ -154,7 +189,6 @@ button {
 }
 
 #penelitian li .card-text{
-    font-size:15px;
     height:20px;
     text-align:left;
 }

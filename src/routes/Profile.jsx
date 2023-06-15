@@ -65,7 +65,7 @@ const VisiMisi = () => {
               <div id="misi_desc">
                 <h3>MISI</h3>
                 <ol>
-                  {loading?(""):(datas.record.misi.map((misi)=>{return <li key={misi[0]}>{misi[1]}</li>}))}
+                  {loading?(""):(datas.record.misi.map((misi, i)=>{return <li key={i}>{misi}</li>}))}
                 </ol>
               </div>
               
@@ -74,7 +74,7 @@ const VisiMisi = () => {
             <section id="tujuan">
               <h3>Tujuan</h3>
               <ol>
-                {loading?(""):(datas.record.tujuan.map((tujuan)=>{return <li key={tujuan[0]}>{tujuan[1]}</li>}))}
+                {loading?(""):(datas.record.tujuan.map((tujuan, i)=>{return <li key={i}>{tujuan}</li>}))}
               </ol>
             </section>
           </div>

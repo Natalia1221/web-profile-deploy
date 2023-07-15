@@ -5,21 +5,42 @@ import { useState } from "react";
 import MainPicture from '../assets/image/main-picture.svg';
 import VisiPicture from '../assets/image/visi.svg';
 import MisiPicture from '../assets/image/misi.svg';
+import supabase from "../config/supabaseClient";
 
 const VisiMisi = () => {
+  const [jumlah, setJumlah] = useState(null);
+  const [visi, setVisi] = useState();
+  const [misi, setMisi] = useState();
+  const [tujuan, setTujuan] = useState();
   const [datas, setDatas] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-
-    fetch("https://api.jsonbin.io/v3/b/642edc16c0e7653a059f0111", {
-      headers: {
-        "X-ACCESS-KEY": "$2b$10$yySJNemZxy5owr6fRQU62Ovqd/PLHW7.kg3KToeIMK5tCRqX398X."
+    const fetchEvent = async () => {
+      const  dataJlh = await supabase.from("jumlah").select("*");
+      if (dataJlh) {
+        setJumlah(dataJlh.data[0]);
       }
-    })
-    .then((response) => response.json())
-    .then((json) => setDatas(json))
-    .then(()=>setLoading(false))
+
+      const  dataVisi = await supabase.from("visi").select("*");
+      if (dataVisi) {
+        setVisi(dataVisi.data[0]);
+      }
+
+      const  dataMisi = await supabase.from("misi").select("*").order('created_at', { ascending: true });
+      if (dataMisi) {
+        setMisi(dataMisi.data)
+        console.log(misi)
+      }
+
+      const  dataTujuan = await supabase.from("tujuan").select("*").order('created_at', { ascending: true });
+      if (dataTujuan) {
+        setTujuan(dataTujuan.data)
+      }
+    };
+
+    fetchEvent()
+    .then(()=>setLoading(false));
   }, []);
 
   
@@ -37,15 +58,15 @@ const VisiMisi = () => {
 
         <section className="info_jumlah">
           <div className="jumlah">
-            <p className="angka">{loading?"":datas.record.jumlah.pengurus}</p>
+            <p className="angka">{!jumlah?"":jumlah.pengurus}</p>
             <p className="ket-angka">JUMLAH PENGURUS</p>
           </div>
           <div className="jumlah">
-            <p className="angka">{loading?"":datas.record.jumlah.komputer}</p>
+            <p className="angka">{!jumlah?"":jumlah.komputer}</p>
             <p className="ket-angka">JUMLAH KOMPUTER</p>
           </div>
           <div className="jumlah">
-            <p className="angka">{loading?"":datas.record.jumlah.luas}</p>
+            <p className="angka">{!jumlah?"":jumlah.luas}</p>
             <p className="ket-angka">LUAS RUANGAN</p>
           </div>
         </section>
@@ -56,7 +77,7 @@ const VisiMisi = () => {
               <img className="gambar_visi" src={VisiPicture}/>
               <div id="visi_desc">
                 <h3>VISI</h3>
-                <p>{loading?"":datas.record.visi}</p>
+                <p>{!visi?"":visi.visi}</p>
               </div>
               </section>
             
@@ -65,7 +86,7 @@ const VisiMisi = () => {
               <div id="misi_desc">
                 <h3>MISI</h3>
                 <ol>
-                  {loading?(""):(datas.record.misi.map((misi, i)=>{return <li key={i}>{misi}</li>}))}
+                  {!misi?(""):(misi.map((misi, i)=>{return <li key={i}>{misi.misi}</li>}))}
                 </ol>
               </div>
               
@@ -74,7 +95,7 @@ const VisiMisi = () => {
             <section id="tujuan">
               <h3>Tujuan</h3>
               <ol>
-                {loading?(""):(datas.record.tujuan.map((tujuan, i)=>{return <li key={i}>{tujuan}</li>}))}
+                {!tujuan?(""):(tujuan.map((tujuan, i)=>{return <li key={i}>{tujuan.tujuan}</li>}))}
               </ol>
             </section>
           </div>

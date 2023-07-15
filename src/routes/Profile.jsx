@@ -12,7 +12,6 @@ const VisiMisi = () => {
   const [visi, setVisi] = useState();
   const [misi, setMisi] = useState();
   const [tujuan, setTujuan] = useState();
-  const [datas, setDatas] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

@@ -1,25 +1,30 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import gambarPengurus from "../assets/image/pengurus.jpg"
+import gambarPengurus from "../assets/image/pengurus.jpg";
+import supabase from "../config/supabaseClient";
+
 const Pengurus = () => {
-  const [datas, setDatas] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [fetchError, setFetchError] = useState(null);
+  const [pengurus, setPengurus] = useState(null);
+
+  const fetchEvent = async () => {
+    const  dataPengurus = await supabase.from("pengurus_img").select("*");
+    if (dataPengurus) {
+      setPengurus(dataPengurus.data);
+      setFetchError(null);
+    }else{
+      console.log(fetchError)
+    }
+  };
 
   useEffect(() => {
-    fetch("https://api.jsonbin.io/v3/b/642edc16c0e7653a059f0111", {
-      headers: {
-        "X-ACCESS-KEY": "$2b$10$yySJNemZxy5owr6fRQU62Ovqd/PLHW7.kg3KToeIMK5tCRqX398X."
-      }
-    })
-    .then((response) => response.json())
-    .then((json) => setDatas(json))
-    .then(()=>setLoading(false))
+    fetchEvent();
   }, []);
   return (
     <>
       <div className="pengurus">
-      <img className="gambar_pengurus" src ={gambarPengurus}/>
+      <img className="gambar_pengurus" src ={!pengurus?"":pengurus[0].link}/>
       </div>
     </>
   );

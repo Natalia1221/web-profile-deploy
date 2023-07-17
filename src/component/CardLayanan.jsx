@@ -16,6 +16,23 @@ function GetData(){
   return allData;
 }
 
+function CardKegiatan({kegiatanArray}){
+  return (
+    <Row xs={1} md={2} className="g-4">
+      {kegiatanArray.map((kegiatan)=>
+        {return <Col key={kegiatan.id}>
+                  <Card className="cardkegiatan">
+                    <Card.Body>
+                      <Card.Title>{kegiatan.name}</Card.Title>
+                      <Card.Text className="description-kegiatan">{kegiatan.desc}</Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+        })}
+    </Row>
+  );
+}
+
 function CardPendidikan() {
   
   const [datas, setDatas] = useState([]);
@@ -101,4 +118,4 @@ function CardAbdimas() {
   );
 }
 
-export {CardAbdimas, CardPendidikan, CardPenelitian};
+export {CardAbdimas, CardPendidikan, CardPenelitian, CardKegiatan};

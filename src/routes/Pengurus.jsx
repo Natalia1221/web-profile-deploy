@@ -1,7 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import gambarPengurus from "../assets/image/pengurus.jpg";
 import supabase from "../config/supabaseClient";
 
 const Pengurus = () => {
